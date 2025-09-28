@@ -22,7 +22,7 @@ const characterImages = {
 };
 
 const planetImages = {
-    1: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/1.jpg", // Tatooine
+    1: "https://via.placeholder.com/216x200/d4a574/ffffff?text=Tatooine",
     2: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/2.jpg", // Alderaan
     3: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/3.jpg", // Yavin IV
     4: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/4.jpg", // Hoth
@@ -49,9 +49,9 @@ const vehicleImages = {
 
 // Star Wars themed fallback images
 const defaultImages = {
-    character: "https://via.placeholder.com/270x200/2c3e50/ffffff?text=Star+Wars+Character",
-    planet: "https://via.placeholder.com/270x200/34495e/ffffff?text=Star+Wars+Planet", 
-    vehicle: "https://via.placeholder.com/270x200/8e44ad/ffffff?text=Star+Wars+Vehicle"
+    character: "https://via.placeholder.com/216x200/2c3e50/ffffff?text=Star+Wars+Character",
+    planet: "https://via.placeholder.com/216x200/34495e/ffffff?text=Star+Wars+Planet", 
+    vehicle: "https://via.placeholder.com/216x200/8e44ad/ffffff?text=Star+Wars+Vehicle"
 };
 
 export function Home() {
@@ -136,17 +136,17 @@ export function Home() {
                             style={{left: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('characters-scroll');
-                                container.scrollBy({left: -320, behavior: 'smooth'});
+                                container.scrollBy({left: -260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-left"></i>
                         </button>
-                        <div id="characters-scroll" className="px-3 d-flex overflow-x-auto gap-4" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
+                        <div id="characters-scroll" className="px-3 d-flex overflow-x-auto gap-3" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
                             {
                                 store.characters.map((item) => {
                                     const isFav = isFavorite(item, 'character');
                                     return (
-                                        <div key={item.name} style={{minWidth: '270px', maxWidth: '270px', flexShrink: 0}}>
+                                        <div key={item.name} className="carousel-item-5">
                                             <div className="card border border-dark h-100 star-wars-card">
                                                 <div className="card-image-container character-image-container">
                                                     <img 
@@ -181,7 +181,7 @@ export function Home() {
                             style={{right: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('characters-scroll');
-                                container.scrollBy({left: 320, behavior: 'smooth'});
+                                container.scrollBy({left: 260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-right"></i>
@@ -195,17 +195,17 @@ export function Home() {
                             style={{left: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('planets-scroll');
-                                container.scrollBy({left: -320, behavior: 'smooth'});
+                                container.scrollBy({left: -260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-left"></i>
                         </button>
-                        <div id="planets-scroll" className="px-3 d-flex overflow-x-auto gap-4" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
+                        <div id="planets-scroll" className="px-3 d-flex overflow-x-auto gap-3" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
                             {
                                 store.planets.map((item) => {
                                     const isFav = isFavorite(item, 'planet');
                                     return (
-                                        <div key={item.name} style={{minWidth: '270px', maxWidth: '270px', flexShrink: 0}}>
+                                        <div key={item.name} className="carousel-item-5">
                                             <div className="card border border-dark h-100 star-wars-card">
                                                 <div className="card-image-container planet-image-container">
                                                     <img 
@@ -240,7 +240,7 @@ export function Home() {
                             style={{right: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('planets-scroll');
-                                container.scrollBy({left: 320, behavior: 'smooth'});
+                                container.scrollBy({left: 260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-right"></i>
@@ -254,17 +254,17 @@ export function Home() {
                             style={{left: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('vehicles-scroll');
-                                container.scrollBy({left: -320, behavior: 'smooth'});
+                                container.scrollBy({left: -260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-left"></i>
                         </button>
-                        <div id="vehicles-scroll" className="px-3 d-flex overflow-x-auto gap-4" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
+                        <div id="vehicles-scroll" className="px-3 d-flex overflow-x-auto gap-3" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
                             {
                                 store.vehicles.map((item) => {
                                     const isFav = isFavorite(item, 'vehicle');
                                     return (
-                                        <div key={item.name} style={{minWidth: '270px', maxWidth: '270px', flexShrink: 0}}>
+                                        <div key={item.name} className="carousel-item-5">
                                             <div className="card border border-dark h-100 star-wars-card">
                                                 <div className="card-image-container vehicle-image-container">
                                                     <img 
@@ -299,7 +299,7 @@ export function Home() {
                             style={{right: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 10}}
                             onClick={() => {
                                 const container = document.getElementById('vehicles-scroll');
-                                container.scrollBy({left: 320, behavior: 'smooth'});
+                                container.scrollBy({left: 260, behavior: 'smooth'});
                             }}
                         >
                             <i className="fa-solid fa-chevron-right"></i>
