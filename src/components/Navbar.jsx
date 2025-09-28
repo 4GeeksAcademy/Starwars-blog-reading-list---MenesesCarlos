@@ -71,7 +71,7 @@ export const Navbar = () => {
                 <div className="col-12 d-flex justify-content-center">
                     <nav >
                         <ul className="d-flex sin-estilo mb-0 ">
-                            <li className="menus mx-4">
+                            <li className="menus p-0">
                                 <a href="#">NEWS + FEATURES</a>
                                 <ul className="sub-menu sin-estilo">
                                     <li><a href="#">THE LATEST</a></li>
@@ -80,7 +80,7 @@ export const Navbar = () => {
                                     <li><a href="#">BOCKS + COMICS</a></li>
                                 </ul>
                             </li>
-                            <li className="menus mx-4">
+                            <li className="menus mx-5">
                                 <a href="">VIDEO</a>
                             </li>
                             <li className="menus mx-4">
@@ -125,7 +125,7 @@ export const Navbar = () => {
                 </div>
             </div>
             <div className="container-fluid">
-                <button className="w-100 bg-black text-white border border-0 my-3 letra-pequena">STAR WARS ON DISNEY+</button>
+                <button className="btn-disney bg-black text-white border border-0 my-2 mx-5 letra-pequena">STAR WARS ON DISNEY+</button>
             </div>
             <div className="search container-fluid  p-2">
                 <div className="input-group mb-3 align-items-center bg-dark rounded ">
