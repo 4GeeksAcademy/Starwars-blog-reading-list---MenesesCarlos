@@ -1,0 +1,78 @@
+.i-grande {
+    font-size: 1.4rem;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.menus {
+    position: relative;
+    display: inline-block;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    border: 0.5px solid rgb(230, 230, 230);
+    width: 220px;
+    z-index: 10;
+}
+
+
+.menus:hover .sub-menu {
+    display: block;
+}
+
+.sin-estilo {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    margin: 20px 0;
+}
+
+.letra-pequena {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-control::placeholder {
+    color: white;
+    padding: 15px;
+    outline: none;
+    border: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-kids {
+    border-radius: 40%;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0 5px;
+    margin-left: 18px;
+    color: black;
+    background-color: white;
+}
+
+.sin-style {
+    list-style-type: none;
+}
+
+.bordergrueso {
+    border-bottom: 3px solid;
+}

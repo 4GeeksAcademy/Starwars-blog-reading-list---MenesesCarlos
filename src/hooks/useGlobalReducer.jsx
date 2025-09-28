@@ -1,24 +1,48 @@
-// Import necessary hooks and functions from React.
-import { useContext, useReducer, createContext } from "react";
-import storeReducer, { initialStore } from "../store"  // Import the reducer and the initial state.
+// src/hooks/useGlobalReducer.jsx
+import { useContext, useReducer, createContext, useEffect } from "react";
+import storeReducer, { initialStore } from "../store";
 
-// Create a context to hold the global state of the application
-// We will call this global state the "store" to avoid confusion while using local states
-const StoreContext = createContext()
+const StoreContext = createContext(null);
+const URL_base = "https://www.swapi.tech/api/";
 
-// Define a provider component that encapsulates the store and warps it in a context provider to 
-// broadcast the information throught all the app pages and components.
 export function StoreProvider({ children }) {
-    // Initialize reducer with the initial state.
-    const [store, dispatch] = useReducer(storeReducer, initialStore())
-    // Provide the store and dispatch method to all child components.
-    return <StoreContext.Provider value={{ store, dispatch }}>
-        {children}
+  const [store, dispatch] = useReducer(storeReducer, initialStore());
+
+  useEffect(() => {
+    const fetchAll = async () => {
+      try {
+        const [pRes, plRes, vRes] = await Promise.all([
+          fetch(`${URL_base}people/`),
+          fetch(`${URL_base}planets/`),
+          fetch(`${URL_base}vehicles/`),
+        ]);
+
+        const [pData, plData, vData] = await Promise.all([
+          pRes.json(),
+          plRes.json(),
+          vRes.json(),
+        ]);
+
+        dispatch({ type: "GET_CHARACTERS", payload: pData.results });
+        dispatch({ type: "GET_PLANETS", payload: plData.results });
+        dispatch({ type: "GET_VEHICLES", payload: vData.results });
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchAll();
+  }, []);
+
+  return (
+    <StoreContext.Provider value={{ store, dispatch }}>
+      {children}
     </StoreContext.Provider>
+  );
 }
 
-// Custom hook to access the global state and dispatch function.
 export default function useGlobalReducer() {
-    const { dispatch, store } = useContext(StoreContext)
-    return { dispatch, store };
+  const ctx = useContext(StoreContext);
+  if (!ctx) throw new Error("useGlobalReducer must be used within <StoreProvider>");
+  return ctx; // { store, dispatch }
 }
