@@ -16,14 +16,14 @@ export const Navbar = () => {
         <>
             <div className="container">
                 <div className="row mt-2">
-                    <div className="col-12 d-flex justify-content-between m-0 p-0">
-                        <div className=" mt-4">
-                            <i className="fa-brands fa-tiktok m-1 i-grande"></i>
-                            <i className="fa-brands fa-instagram mx-2 i-grande"></i>
-                            <i className="fa-brands fa-x-twitter m-1 i-grande"></i>
+                    <div className="col-12 d-flex justify-content-between align-items-start p-0">
+                        <div className="d-flex align-items-center gap-2 mt-4">
+                            <i className="fa-brands fa-tiktok mx-1 i-grande"></i>
+                            <i className="fa-brands fa-instagram m-1 i-grande"></i>
+                            <i className="fa-brands fa-x-twitter mx-1 i-grande"></i>
                             <i className="fa-brands fa-facebook mx-2 i-grande"></i>
-                            <i className="fa-brands fa-youtube m-1 i-grande border-end pe-5"></i>
-                            <button className="btn-kids">KIDS</button>
+                            <i className="fa-brands fa-youtube mx-2 i-grande border-end pe-3"></i>
+                            <button className="btn-kids rounded-3 ms-1">KIDS</button>
                         </div>
                         <div>
                             <Link to="/">
@@ -44,12 +44,12 @@ export const Navbar = () => {
                                     </a>
                                     <ul className="dropdown-menu sub-menu">
                                         {store.favorites.length === 0 ? (
-                                            <li className="dropdown-item text-white ps-0">No favorites yet</li>
+                                            <li className="dropdown-item text-white ps-0 bg-transparent">No favorites yet</li>
                                         ) : (
                                             store.favorites.map((item) => {
                                                 return (
-                                                    <li key={`${item.uid}-${item.type}`} className="d-flex justify-content-between pe-3">
-                                                        <a className="dropdown-item text-white ps-0" href="#">{item.name}</a>
+                                                    <li key={`${item.uid}-${item.type}`} className="d-flex justify-content-between pe-3 ">
+                                                        <a className="dropdown-item text-white ps-0 bg-transparent" href="#">{item.name}</a>
                                                         <i
                                                             className="fa-solid fa-trash py-1"
                                                             style={{ cursor: 'pointer' }}
@@ -127,14 +127,14 @@ export const Navbar = () => {
             <div className="container-fluid">
                 <button className="w-100 bg-black text-white border border-0 my-3 letra-pequena">STAR WARS ON DISNEY+</button>
             </div>
-            <div className="container-fluid my-4 p-2">
-                <div className="input-group mb-3 align-items-center bg-dark rounded">
+            <div className="search container-fluid  p-2">
+                <div className="input-group mb-3 align-items-center bg-dark rounded ">
                     <input type="text" className="form-control fs-3 border border-0 bg-dark p-2 text-white"
                         placeholder="Search Databank"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2" />
                     <span ><i className="fa-solid fa-magnifying-glass me-3"></i></span>
-                    <span className="me-4" id="basic-addon2">SEARCH</span>
+                    <span className="me-4 p-2" id="basic-addon2">SEARCH</span>
                 </div>
             </div>
         </>
