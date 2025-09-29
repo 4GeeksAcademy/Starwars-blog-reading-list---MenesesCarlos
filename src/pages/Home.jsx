@@ -7,7 +7,7 @@ import "../personajes.css";
 
 const URL_base = "https://www.swapi.tech/api/"
 
-// Using GitHub hosted Star Wars images - more reliable
+// Using GitHub hosted Star Wars images 
 const characterImages = {
     1: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/1.jpg", // Luke Skywalker
     2: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/2.jpg", // C-3PO
@@ -22,7 +22,7 @@ const characterImages = {
 };
 
 const planetImages = {
-    1: "https://via.placeholder.com/216x200/d4a574/ffffff?text=Tatooine",
+    1: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?w=216&h=200&fit=crop",
     2: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/2.jpg", // Alderaan
     3: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/3.jpg", // Yavin IV
     4: "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/planets/4.jpg", // Hoth
