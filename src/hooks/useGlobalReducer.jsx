@@ -1,4 +1,3 @@
-// src/hooks/useGlobalReducer.jsx
 import { useContext, useReducer, createContext, useEffect } from "react";
 import storeReducer, { initialStore } from "../store";
 

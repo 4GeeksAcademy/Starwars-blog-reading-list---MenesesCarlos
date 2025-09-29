@@ -39,7 +39,7 @@ export function Characters() {
                         <button className="btn btn-dark" onClick={() => navigate(-1)}> Regresar</button>
                         <div className="row d-flex">
                             <div className="col-12 col-md-7 p-0 mt-4 ">
-                                <img className="imagen-carta rounded-start" src="https://lumiere-a.akamaihd.net/v1/images/paz-vizla-main_4d1071bc.jpeg?region=304%2C0%2C952%2C536" alt="" />
+                                <img className="imagen-carta rounded-start" src="https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=800&h=450&fit=crop" alt="" />
                             </div>
                             <div className="col-12 col-md-5 bg-dark mt-4 rounded-end pt-4 px-4">
                                 <h4>{person.name}</h4>

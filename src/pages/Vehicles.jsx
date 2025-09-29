@@ -39,7 +39,8 @@ export function Vehicles() {
                         <button className="btn btn-dark" onClick={() => navigate(-1)}> Regresar</button>
                         <div className="row d-flex">
                             <div className="col-12 col-md-7 p-0 mt-4 ">
-                                <img className="imagen-carta rounded-start" src="https://lumiere-a.akamaihd.net/v1/images/remnant-speeder-bike-main_8b679155.jpeg?region=240%2C0%2C951%2C536" alt="" />
+                                <img className="imagen-carta rounded-start" src="https://lumiere-a.akamaihd.net/v1/images/resistance-x-wing_9433981f.jpeg?region=0%2C96%2C1560%2C780"
+ alt="" />
                             </div>
                             <div className="col-12 col-md-5 bg-dark mt-4 rounded-end pt-4 px-4">
                                 <h4>{vehiculo.name}</h4>
